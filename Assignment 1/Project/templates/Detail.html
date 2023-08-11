@@ -1,0 +1,35 @@
+{% extends 'Base.html' %} {% block content %}
+<div
+  style="
+    margin: 0;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+  "
+>
+  <div style="padding: 20px; text-align: center">
+    <h1>Welcome to My Beautiful Index Page</h1>
+    <p>
+      This is a responsive and visually appealing page created using Bootstrap.
+    </p>
+    <a href="{% url 'Index' %}"> 
+      <button
+        style="
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 30px;
+        "
+      >
+        Go to Index
+      </button></a
+    >
+  </div>
+</div>
+{% endblock content %}
