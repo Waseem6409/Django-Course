@@ -1,0 +1,53 @@
+{% extends 'Base.html' %} {% block title %}Showroom | Our Team{% endblock title%} 
+{% block content %}
+<div class="container mt-5" style="min-height: 70vh">
+  <div class="row">
+    {% for staff in staffs %}
+    <div class="col-md-4 mb-4">
+      <div
+        class="card"
+        style="
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="{{staff.image.url}}"
+          alt="Card Image"
+          class="card-img-top"
+          style="
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 250px;
+            width: auto;
+            object-fit: contain;
+            background-color: #000000;
+          "
+        />
+        <div class="card-body">
+          <h5
+            class="card-title"
+            style="margin-top: 10px; font-size: 1.25rem; font-weight: bold"
+          >
+            {{staff.name}}
+          </h5>
+          <div>
+
+              
+              <strong style="font-weight:500" class="mt-5" >
+                  Showroom: <span style="font-weight:300" > {{staff.showroom}}</span>
+                </strong>
+            </div>
+            <div>
+                <strong style="font-weight:500">
+                    Joining date: <span style="font-weight:300" > {{staff.created_at}}</span>
+                </strong>
+            </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
